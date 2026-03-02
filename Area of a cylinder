@@ -1,0 +1,38 @@
+#include <math.h>
+
+using namespace std;
+
+class Cylinder{
+
+public:
+float radius;
+float pi;
+float height;
+
+double calculate_area(){
+    
+    return (2*pi*pow(radius, 2.0)+2*pi*radius*height);
+}
+
+double calculate_volume(){
+    
+    return(pi*pow(radius, 2.0)*height);
+}
+};
+
+int main(){
+    
+    Cylinder cyl1, cyl2;
+    double volume, area;
+    
+    cyl1.radius = 7;
+    cyl1.pi = 3.14;
+    cyl1.height = 9;
+    volume = cyl1.calculate_volume();
+    area = cyl1.calculate_area();
+    
+    
+    cout<< "The area is "<<area<<endl;
+    cout<< "The volume is "<<volume<<endl;
+    
+}
